@@ -1,0 +1,171 @@
+basePath: /api/v1
+definitions:
+  models.ItemModel:
+    properties:
+      brand:
+        type: string
+      category:
+        type: string
+      id:
+        type: string
+      list:
+        type: string
+      name:
+        type: string
+      price:
+        type: string
+      product_image:
+        type: string
+      stock:
+        type: string
+      unit+sale_price:
+        type: string
+      variant:
+        type: string
+    type: object
+host: localhost:8000
+info:
+  contact: {}
+  description: This is a price comparison API for various shops in South Africa
+  title: Price Compare API
+  version: "1.0"
+paths:
+  /checkers:
+    get:
+      consumes:
+      - application/json
+      description: "Get\tcheckers searched items"
+      parameters:
+      - description: Search text for filtering items
+        in: query
+        name: search
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.ItemModel'
+            type: array
+      summary: Get checkers searched items
+      tags:
+      - Shops
+  /game:
+    get:
+      consumes:
+      - application/json
+      description: Get game searched items
+      parameters:
+      - description: Search text for filtering items
+        in: query
+        name: search
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.ItemModel'
+            type: array
+      summary: Get game searched items
+      tags:
+      - Shops
+  /makro:
+    get:
+      consumes:
+      - application/json
+      description: Get makro searched items
+      parameters:
+      - description: Search text for filtering items
+        in: query
+        name: search
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.ItemModel'
+            type: array
+      summary: Get makro searched items
+      tags:
+      - Shops
+  /pnp:
+    get:
+      consumes:
+      - application/json
+      description: Get PnP searched items
+      parameters:
+      - description: Search text for filtering items
+        in: query
+        name: search
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.ItemModel'
+            type: array
+      summary: Get PnP searched items
+      tags:
+      - Shops
+  /shoprite:
+    get:
+      consumes:
+      - application/json
+      description: Get shoprite searched items
+      parameters:
+      - description: Search text for filtering items
+        in: query
+        name: search
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.ItemModel'
+            type: array
+      summary: Get shoprite searched items
+      tags:
+      - Shops
+  /sum:
+    get:
+      consumes:
+      - application/json
+      description: Sum search items
+      parameters:
+      - description: Search text for filtering items
+        in: query
+        name: search
+        required: true
+        type: string
+      produces:
+      - application/json
+      responses:
+        "200":
+          description: OK
+          schema:
+            items:
+              $ref: '#/definitions/models.ItemModel'
+            type: array
+      summary: Sum search items
+      tags:
+      - Shops
+swagger: "2.0"

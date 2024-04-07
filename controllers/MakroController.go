@@ -7,6 +7,16 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// GetMakroSearchedItems godoc
+// @Summary Get makro searched items
+// @Schemes
+// @Param search query string true "Search text for filtering items"
+// @Description Get makro searched items
+// @Tags Shops
+// @Accept json
+// @Produce json
+// @Success 200 {array} models.ItemModel
+// @Router /makro [get]
 func GetMakroSearchedItems(c *gin.Context) {
 
 	searchText, ok := c.GetQuery("search")

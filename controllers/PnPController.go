@@ -7,6 +7,16 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// GetPnPSearchedItems godoc
+// @Summary Get PnP searched items
+// @Schemes
+// @Param search query string true "Search text for filtering items"
+// @Description Get PnP searched items
+// @Tags Shops
+// @Accept json
+// @Produce json
+// @Success 200 {array} models.ItemModel
+// @Router /pnp [get]
 func GetPnPSearchedItems(c *gin.Context) {
 
 	searchText, ok := c.GetQuery("search")

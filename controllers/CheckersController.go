@@ -7,6 +7,16 @@ import (
 	"github.com/gin-gonic/gin"
 )
 
+// GetCheckersSearchedItems godoc
+// @Summary Get checkers searched items
+// @Schemes
+// @Param search query string true "Search text for filtering items"
+// @Description Get	checkers searched items
+// @Tags Shops
+// @Accept json
+// @Produce json
+// @Success 200 {array} models.ItemModel
+// @Router /checkers [get]
 func GetCheckersSearchedItems(c *gin.Context) {
 
 	searchText, ok := c.GetQuery("search")

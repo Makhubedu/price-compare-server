@@ -1,0 +1,260 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "description": "This is a price comparison API for various shops in South Africa",
+        "title": "Price Compare API",
+        "contact": {},
+        "version": "1.0"
+    },
+    "host": "localhost:8000",
+    "basePath": "/api/v1",
+    "paths": {
+        "/checkers": {
+            "get": {
+                "description": "Get\tcheckers searched items",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Shops"
+                ],
+                "summary": "Get checkers searched items",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Search text for filtering items",
+                        "name": "search",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/models.ItemModel"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/game": {
+            "get": {
+                "description": "Get game searched items",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Shops"
+                ],
+                "summary": "Get game searched items",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Search text for filtering items",
+                        "name": "search",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/models.ItemModel"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/makro": {
+            "get": {
+                "description": "Get makro searched items",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Shops"
+                ],
+                "summary": "Get makro searched items",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Search text for filtering items",
+                        "name": "search",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/models.ItemModel"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/pnp": {
+            "get": {
+                "description": "Get PnP searched items",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Shops"
+                ],
+                "summary": "Get PnP searched items",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Search text for filtering items",
+                        "name": "search",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/models.ItemModel"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/shoprite": {
+            "get": {
+                "description": "Get shoprite searched items",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Shops"
+                ],
+                "summary": "Get shoprite searched items",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Search text for filtering items",
+                        "name": "search",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/models.ItemModel"
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "/sum": {
+            "get": {
+                "description": "Sum search items",
+                "consumes": [
+                    "application/json"
+                ],
+                "produces": [
+                    "application/json"
+                ],
+                "tags": [
+                    "Shops"
+                ],
+                "summary": "Sum search items",
+                "parameters": [
+                    {
+                        "type": "string",
+                        "description": "Search text for filtering items",
+                        "name": "search",
+                        "in": "query",
+                        "required": true
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "OK",
+                        "schema": {
+                            "type": "array",
+                            "items": {
+                                "$ref": "#/definitions/models.ItemModel"
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "definitions": {
+        "models.ItemModel": {
+            "type": "object",
+            "properties": {
+                "brand": {
+                    "type": "string"
+                },
+                "category": {
+                    "type": "string"
+                },
+                "id": {
+                    "type": "string"
+                },
+                "list": {
+                    "type": "string"
+                },
+                "name": {
+                    "type": "string"
+                },
+                "price": {
+                    "type": "string"
+                },
+                "product_image": {
+                    "type": "string"
+                },
+                "stock": {
+                    "type": "string"
+                },
+                "unit+sale_price": {
+                    "type": "string"
+                },
+                "variant": {
+                    "type": "string"
+                }
+            }
+        }
+    }
+}
